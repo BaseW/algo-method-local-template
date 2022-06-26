@@ -1,8 +1,4 @@
-if [ $# != 1 ];then
-  echo "Please set question number"
-  exit 1
-fi
+questionNo=`cat currentNo.txt | tr -d "\n"`
 
-questionNo=$1
-
+rm currentNo.txt
 git add . && git commit -m "answer for question $questionNo"

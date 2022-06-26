@@ -6,4 +6,4 @@ fi
 questionNo=$1
 make get_question No=$questionNo || mkdir -p questions/$questionNo
 code questions/$questionNo/main.rs
-
+echo $questionNo > currentNo.txt
